@@ -39,5 +39,10 @@ Automation framework based in Page Object Model using Appium to run few test cas
 - TestConfig. In this file which maintains the needed data for setting up the test and run it. Details about the Appium configuration, device chosen, time out, APK, etc.
 - Driver. This is the base page of framework in which the main driver is created, used and killed.   
 
+## Improvements 
+- Having different files for test user data, environment configuration, runner, etc.
+- Output with details of the steps and pages.
+- Test reports in files (e.g. Allure)
+
 ## Contact
 If you have any questions about this repo, please do not hesitate to contact me.
