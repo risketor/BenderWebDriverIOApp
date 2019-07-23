@@ -23,19 +23,19 @@ Automation framework based in Page Object Model using Appium to run few test cas
 1. Appium server running on (http://127.0.0.1:4723/ and port 4723).
 2. Device connected.
 3. It is a Maven project, so reimporting all the project is the first thing to do. 
-4. "BenderSuiteTest", right click, and run.
+4 . To run the test it can be done in the command line **mvn clean install**, or in the IDE right click and run **BenderSuiteTest**.
 
 ## Built With
 * Appium open source test automation framework. 1.13.0
-* Junit
-* Maven(https://maven.apache.org/) - Dependency Management.
+* Junit 4.13-beta-3
+* Maven(https://maven.apache.org/) - Dependency Management. 3.6.1
 * Intellij IDEA 2019.1.3
 
 
 ## Framework components
-- Maven. This project is created as maven project, all the libraries required are maintained in "pom.xml" file as a dependencies. On importing as a Maven project it will download all the dependencies.
-- Selenium and Appium. They have been used for automating UI actions on mobile application.
 - Pages - Page Object Model - Every page is a class, the navigation bar is a class, and by using composition we could reuse the navigation bar component.
+- Maven. Project created as maven project, all the libraries required are maintained in "pom.xml" file as a dependencies. On importing as a Maven project it will download all the dependencies.
+- Selenium and Appium. They have been used for automating UI actions on mobile application.
 - TestConfig. In this file which maintains the needed data for setting up the test and run it. Details about the Appium configuration, device chosen, time out, APK, etc.
 - Driver. This is the base page of framework in which the main driver is created, used and killed.   
 

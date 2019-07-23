@@ -19,7 +19,6 @@ public class FormsPage extends Driver {
 
     public void waitToLoad() {
         waitForVisibility(switch_field);
-        waitForVisibility(dropdown_button);
         waitForVisibility(active_button);
     }
 
