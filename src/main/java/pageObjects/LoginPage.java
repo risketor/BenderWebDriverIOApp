@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 /**
@@ -12,6 +13,10 @@ public class LoginPage extends Driver {
     private final By password_field= By.id("input-password");
     private final By login_button = By.xpath("//android.view.ViewGroup[@content-desc=\"button-LOGIN\"]");
     private final By alert_ok_button = By.id("android:id/button1");
+
+    public void LoginPage(){
+        PageFactory.initElements(driver, LoginPage.class);
+    }
 
     public void waitToLoad() {
         waitForVisibility(email_field);

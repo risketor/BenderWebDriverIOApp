@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 import utilities.Helper;
 
@@ -11,8 +12,11 @@ public class WebViewPage extends Driver {
 
     private final By getStarted_button = By.linkText("Getting Started");
     private final By gitterChannel_link = By.linkText("Gitter Channel");
-
     private final String webViewName = "WEBVIEW_com.wdiodemoapp";
+
+    public void WebViewPage(){
+        PageFactory.initElements(driver, WebViewPage.class);
+    }
 
     public void waitToLoad() {
         waitForVisibility(getStarted_button);

@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 /**
@@ -8,9 +9,13 @@ import utilities.Driver;
  */
 public class NavigationBar extends Driver {
 
-    private final By webView_button = By.xpath("//android.view.ViewGroup[@content-desc=\"WebView\"]");
-    private final By login_button = By.xpath("//android.view.ViewGroup[@content-desc=\"Login\"]");
-    private final By forms_button = By.xpath("//android.view.ViewGroup[@content-desc=\"Forms\"]");
+    private final By webView_button = By.id("WebView");
+    private final By login_button = By.id("Login");
+    private final By forms_button = By.id("Forms");
+
+    public void NavigationBar(){
+        PageFactory.initElements(driver, NavigationBar.class);
+    }
 
     public void waitToLoad(){
         waitForVisibility(webView_button);

@@ -2,7 +2,6 @@ package runTest;
 
 import config.TestConfig;
 import org.junit.*;
-import org.openqa.selenium.support.PageFactory;
 import pageObjects.*;
 import utilities.AppiumSetup;
 import utilities.Driver;
@@ -22,12 +21,12 @@ public class BenderSuiteTest extends Driver {
     public WebViewPage webViewPage;
 
     public BenderSuiteTest() {
-        homePage = PageFactory.initElements(driver, HomePage.class);
-        navigationBar = PageFactory.initElements(driver, NavigationBar.class);
-        loginPage = PageFactory.initElements(driver, LoginPage.class);
-        formsPage = PageFactory.initElements(driver, FormsPage.class);
-        webViewPage = PageFactory.initElements(driver, WebViewPage.class);
-    }
+        homePage = new HomePage();
+        navigationBar = new NavigationBar();
+        loginPage = new LoginPage();
+        formsPage = new FormsPage();
+        webViewPage = new WebViewPage();
+      }
 
     /**
      * Before starting each test, the Appium driver will be created
@@ -49,6 +48,7 @@ public class BenderSuiteTest extends Driver {
 
 
     // TEST CASES
+
 
     /**
      * WebView Tab Test

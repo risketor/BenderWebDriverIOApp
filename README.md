@@ -40,9 +40,11 @@ Automation framework based in Page Object Model using Appium to run few test cas
 - Driver. This is the base page of framework in which the main driver is created, used and killed.   
 
 ## Improvements 
+- Test cases in Gherkin / Cucumber format.
+- Optimize xpaths.
 - Having different files for test user data, environment configuration, runner, etc.
-- Output with details of the steps and pages.
-- Test reports in files (e.g. Allure)
+- Logs / Output with details of the steps and pages.
+- Test reports in files (e.g. Allure).
 
 ## Contact
 If you have any questions about this repo, please do not hesitate to contact me.
